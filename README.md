@@ -5,7 +5,6 @@ nt-scrollspy
 ![Static Badge](https://img.shields.io/badge/html-%23E34F26?style=for-the-badge&logo=html)
 ![Static Badge](https://img.shields.io/badge/sass-%23CC6699?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/vite-bundler-%23646CFF?style=for-the-badge)
-![Static Badge](https://img.shields.io/badge/icon-font_awesome_4.7.0-%23528DD7?style=for-the-badge)
 
 `nt-scrollspy` is a module that provides navigation to easily navigate to the location of each section of the single page website.
 It identifies the location of the section with the value of the `data-title` attribute, creates a navigation, and naturally moves to each section by clicking on the navigation.
