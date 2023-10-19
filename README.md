@@ -15,6 +15,11 @@ As a basic type, it provides navigation styles in the form of `list` and `dot`, 
 기본 타입으로 `list`와 `dot` 형태의 네비게이션 스타일을 제공하고있으며 사용자 정의된 스타일 적용도 가능하다. 
 
 ---
+## Demo
+
+[nt-scrollspy](https://noistommy.github.io/nt-scrollspy) demo page.
+
+---
 ## Installation
 
 ```sh
