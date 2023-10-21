@@ -40,13 +40,14 @@ const scrollspy = new NtScrollspy({
     section: 'section', // class/tag name of section
     title: '.title', // class name of title
     type: 'dot', //'list || 'dot' || '{users}'
-    offset: 10
+    offset: 0
 })
 
 scrollspy.init()
 ```
 
-```html
+```html   
+// .wrapper need css 'height' and 'overflow-y: auto'
 <div class="wrapper">
     <section data-title="section 1"><div class="title">SECTION 1</div> ... </section>
     <section data-title="section 2"><div class="title">SECTION 2</div> ... </section>

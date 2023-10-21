@@ -51,6 +51,7 @@ class Scrollspy {
     init() {
         this.option.scroller = this.getScrollableNode(document.querySelector('section'))
         console.dir(this.option.scroller)
+        this.option.offset = this.option.scroller.offsetTop;
         if(!this.option.scroller) return;
         this.option.scroller.style.scrollBehavior = 'smooth'
         this.currentTop = this.option.scroller.scrollTop;
@@ -107,7 +108,9 @@ class Scrollspy {
     }
     getScrollableNode(node) {
         if (node == null) return null;
-        if (node.scrollHeight > node.clientHeight) {
+        if (document.querySelector('.nt-scroller')) {
+            return document.querySelector('.nt-scroller')
+        } else if (node.scrollHeight > node.clientHeight) {
             return node;
         } else {
             return this.getScrollableNode(node.parentNode);

@@ -17,27 +17,33 @@ onMounted(() => {
     section: 'section',
     title: '.title',
     type: 'dot', //'list || 'dot' || '{users}'
-    offset: 10
+    offset: 125
   })
   smenu.init()
 })
 </script>
 
 <template>
-  <div class="section-wrapper">
-    <section class="s-section">
-      <div>
-        <h1 class="title">{{ msg }}</h1>
-      </div>
-    </section>
+  <div class="nt-scrollspy">
+    <div class="section-wrapper">
+      <section class="s-section">
+        <div>
+          <h1 class="title">{{ msg }}</h1>
+        </div>
+      </section>
+      <section class="s-section" data-title="section 2"><div class="title">SECTION 2</div></section>
+      <section data-title="section 3"><div class="title">SECTION 3</div></section>
+      <section class="s-section" data-title="section 4"><div class="title">SECTION 4</div></section>
+      <section data-title="section 5"><div class="title">SECTION 5</div></section>
+    </div>
   </div>
-  <section class="s-section" data-title="section 2"><div class="title">SECTION 2</div></section>
-  <section data-title="section 3"><div class="title">SECTION 3</div></section>
-  <section class="s-section" data-title="section 4"><div class="title">SECTION 4</div></section>
-  <section data-title="section 5"><div class="title">SECTION 5</div></section>
 </template>
 
 <style lang="scss">
+.nt-scrollspy {
+  max-height: 90vh;
+  overflow-y: auto;
+}
 .read-the-docs {
   color: #888;
 }
