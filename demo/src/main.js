@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import './frogui.css'
 import './style.css'
 import App from './App.vue'
 

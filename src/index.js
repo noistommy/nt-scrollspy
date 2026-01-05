@@ -1,10 +1,11 @@
 import './scrollspy.scss';
 class Scrollspy {
     constructor(options = {}) {
-        let { scroller, section, title, type, offset } = options
+        let { container, scroller, section, title, type, offset } = options
         this.currentTop = 0
         this.currentType = 0
         this.sectionInfo = []
+        this.scrollspy = container
         this.option = {
             scroller: scroller || null,
             section: section || 'section',
@@ -31,11 +32,12 @@ class Scrollspy {
                 this.currentTop = nav[i].offset
             });
         }
-        this.option.scroller.append(ul)
+        this.scrollspy.prepend(ul)
 
     }
+    
     connectNav() {
-        const ul = document.querySelector('.nav-list')
+        const ul = document.querySelector('.nt-nav-list')
         const nav = this.setPosition()
         const lis = ul.querySelectorAll('.type-nav')
         for (let i = 0; i < nav.length; i++) {
@@ -49,13 +51,12 @@ class Scrollspy {
         }
     }
     init() {
-        this.option.scroller = this.getScrollableNode(document.querySelector('section'))
-        console.dir(this.option.scroller)
+        this.option.scroller = this.getScrollableNode(this.scrollspy.querySelector('section'))
         this.option.offset = this.option.scroller.offsetTop;
         if(!this.option.scroller) return;
         this.option.scroller.style.scrollBehavior = 'smooth'
         this.currentTop = this.option.scroller.scrollTop;
-        if (document.querySelector('.nav-list')) {
+        if (document.querySelector('.nt-nav-list')) {
             this.connectNav()
         } else {
             this.createNav()
@@ -85,7 +86,7 @@ class Scrollspy {
         })
     }
     setPosition() {
-        const typeList = document.querySelectorAll(this.option.section);
+        const typeList = this.scrollspy.querySelectorAll(this.option.section);
         const setPos = [];
         typeList.forEach(type => {
             const typeItem = {};
@@ -97,7 +98,7 @@ class Scrollspy {
         return setPos;
     }
     setActive() {
-        const navs = document.querySelectorAll('.type-nav')
+        const navs = this.scrollspy.querySelectorAll('.type-nav')
         navs.forEach((item ,i)=> {
             if (i == this.currentType) {
                 item.classList.add('active')
