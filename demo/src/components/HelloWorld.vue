@@ -24,7 +24,7 @@ onMounted(() => {
   <section class="section-item">
     <div class="header">
       <span class="icon">
-        <i class="xi-bug"></i>
+        <i class="xi-gps"></i>
       </span>
       <div class="title">Dot nav (Base)</div>
     </div>
@@ -33,7 +33,7 @@ onMounted(() => {
   <section class="section-item">
     <div class="header">
       <span class="icon">
-        <i class="xi-bug"></i>
+        <i class="xi-list-dot"></i>
       </span>
       <div class="title">List nav</div>
     </div>
@@ -42,7 +42,7 @@ onMounted(() => {
   <section class="section-item">
     <div class="header">
       <span class="icon">
-        <i class="xi-bug"></i>
+        <i class="xi-user"></i>
       </span>
       <div class="title">Use custom nav</div>
     </div>
