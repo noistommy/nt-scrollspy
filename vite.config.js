@@ -34,6 +34,10 @@ const libConfig = {
 const demoConfig = defineConfig({
   ...commonConfig,
   root: "./demo",
+  base: process.env.NODE_ENV === 'production' ? '/nt-scrollspy/' : '/',
+  server: {
+    port: 5191
+  }
 })
 
 // https://vitejs.dev/config/
