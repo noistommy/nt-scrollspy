@@ -36,7 +36,7 @@ const demoConfig = defineConfig({
   root: "./demo",
   base: process.env.NODE_ENV === 'production' ? '/nt-scrollspy/' : '/',
   server: {
-    port: 5191
+    port: 5905
   }
 })
 
